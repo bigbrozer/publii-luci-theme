@@ -16,6 +16,12 @@ FONT FACES
     src: url("../fonts/Basteleur-Bold.woff2") format("woff2");
 }
 
+@font-face
+{
+    font-family: "Optiker-K";
+    src: url("../fonts/Optiker-K.woff2") format("woff2");
+}
+
 /*====
 VARIABLE OVERRIDES
 ====*/
@@ -23,7 +29,7 @@ VARIABLE OVERRIDES
 $global-background: #212529 !default;
 //$global-color: #dee2e6 !default;
 $global-color: rgba(0, 255, 53, 0.85) !default;
-$global-emphasis-color: rgba(246, 38, 238, 0.85) !default;
+$global-emphasis-color: #f626eed9 !default;
 $global-font-family: "Acme", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $navbar-background: #000 !default;
 
@@ -47,6 +53,14 @@ h1 {
     font-family: "Basteleur Bold"
 }
 
+h2, h3 {
+    font-family: "Optiker-K"
+}
+
 .uk-overlay-primary h1 {
     color: $global-emphasis-color;
+}
+
+footer {
+    background-color: $navbar-background;
 }

@@ -71,6 +71,22 @@
     ],
     "customConfig": [
         {
+            "name": "heroTitle",
+            "label": "Hero title",
+            "group": "Hero",
+            "note": "Set a title for the hero section on homepage.",
+            "value": "Hey, I'm Luci !",
+            "type": "text"
+        },
+        {
+            "name": "heroBody",
+            "label": "Hero body",
+            "group": "Hero",
+            "note": "Set the body of the hero section on homepage.",
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id leo in vitae turpis. Cras sed felis eget velit. Suspendisse interdum consectetur libero id. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Et egestas quis ipsum suspendisse ultrices gravida dictum. Egestas pretium aenean pharetra magna ac placerat vestibulum. Nec ultrices dui sapien eget mi proin sed libero enim. Sodales ut eu sem integer vitae justo. Diam sit amet nisl suscipit adipiscing. Hendrerit dolor magna eget est. Massa sapien faucibus et molestie. In nisl nisi scelerisque eu ultrices. Elementum pulvinar etiam non quam lacus. In massa tempor nec feugiat nisl. Vel orci porta non pulvinar neque. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Donec ac odio tempor orci dapibus ultrices in iaculis nunc.",
+            "type": "wysiwyg"
+        },
+        {
             "name": "mainWidth",
             "label": "Main width",
             "group": "Layout",

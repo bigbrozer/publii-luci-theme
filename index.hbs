@@ -3,15 +3,27 @@
 {{> head}}
 {{> navbar}}
 
-<div class="uk-container-expand">
-    <div class="uk-inline">
-        <img src="./assets/images/about-me-image.png" alt="">
-        <div class="uk-overlay uk-overlay-primary uk-position-large uk-position-top-left uk-width-xlarge">
-            <h1 class="uk-heading-bullet">Hey ! I'm Luci.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id leo in vitae turpis. Cras sed felis eget velit. Suspendisse interdum consectetur libero id. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Et egestas quis ipsum suspendisse ultrices gravida dictum. Egestas pretium aenean pharetra magna ac placerat vestibulum. Nec ultrices dui sapien eget mi proin sed libero enim. Sodales ut eu sem integer vitae justo. Diam sit amet nisl suscipit adipiscing. Hendrerit dolor magna eget est. Massa sapien faucibus et molestie. In nisl nisi scelerisque eu ultrices. Elementum pulvinar etiam non quam lacus. In massa tempor nec feugiat nisl. Vel orci porta non pulvinar neque. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Donec ac odio tempor orci dapibus ultrices in iaculis nunc.</p>
+<a id="about-me"></a>
+
+<div class="uk-section-default">
+    <div class="uk-section uk-light uk-background-cover uk-background-top-right" style="background-image: url({{asset "images/about-me-image.png"}})" uk-scrollspy="cls: uk-animation-fade">
+
+        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+            {{! Hero }}
+            <div>
+                <div class="uk-container uk-overlay-primary" uk-scrollspy="cls: uk-animation-slide-left; delay: 500">
+                    <h2 class="uk-heading-divider">{{@config.custom.heroTitle}}</h2>
+                    <div class="uk-hidden@m">{{{@config.custom.heroBody}}}</div>
+                    <div class="uk-visible@m uk-text-large">{{{@config.custom.heroBody}}}</div>
+                </div>
+            </div>
+            {{! /Hero }}
         </div>
+
     </div>
 </div>
+
+{{> footer}}
 
 <!--
 <main class="uk-container uk-width-large">
@@ -23,6 +35,4 @@
         {{> pagination}}
     </div>
 </main>
-
-{{> footer}}
 -->

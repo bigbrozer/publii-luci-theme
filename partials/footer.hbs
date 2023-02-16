@@ -1,11 +1,32 @@
-<footer>
-
-   {{! checks if any menu is assigned to the Footer menu position }}
-   {{#if menus.footerMenu}}
-      {{> menu menus.footerMenu}}
-   {{/if}}
-   {{! /checks if any menu is assigned to the Footer menu position }}
-
+<footer class="uk-section uk-container-expand uk-height-small uk-dark">
+   <div class="uk-flex uk-flex-center">
+      {{! checks if any menu is assigned to the Footer menu position }}
+      {{#if menus.footerMenu}}
+         {{!
+         {
+            "name": "Liens",
+            "position": "footerMenu",
+            "items": [
+               {
+                  "id": 1676396366585,
+                  "label": "LinkedIn",
+                  "title": "",
+                  "type": "external",
+                  "target": "_blank",
+                  "rel": "",
+                  "link": "https://www.linkedin.com/in/lucie-besan%C3%A7on-759b431a8/",
+                  "cssClass": "",
+                  "isHidden": false,
+                  "items": [],
+                  "level": 2
+               }
+            ]
+         }
+         }}
+         {{> social menus.footerMenu}}
+      {{/if}}
+      {{! /checks if any menu is assigned to the Footer menu position }}
+   </div>
 </footer>
 
 </body>
