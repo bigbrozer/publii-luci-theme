@@ -11,13 +11,7 @@
          {{! check if the menu item is a link }}
          {{#if link}}
             <a
-               href="{{menuUrl}}"
-
-               {{! check if title attribute exists }}
-               {{#if title}}
-                  title="{{title}}"
-               {{/if}}
-               {{! /check if title attribute exists }}
+               href="{{menuUrl}}{{title}}"
 
                {{! check if target attribute exists }}
                {{#if target}}

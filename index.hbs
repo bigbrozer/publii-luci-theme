@@ -3,25 +3,70 @@
 {{> head}}
 {{> navbar}}
 
-<a id="about-me"></a>
 
-<div class="uk-section-default">
-    <div class="uk-section uk-light uk-background-cover uk-background-top-right" style="background-image: url({{asset "images/about-me-image.png"}})" uk-scrollspy="cls: uk-animation-fade">
+{{! Hero }}
+<div class="uk-section uk-background-cover uk-background-top-right" style="background-image: url({{asset "images/about-me-image.png"}})" uk-scrollspy="cls: uk-animation-fade">
+    <a id="about-me"></a>
 
-        <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
-            {{! Hero }}
+    <div class="uk-container uk-container-expand uk-height-large">
+        <div class="uk-grid-large uk-child-width-1-2@m" uk-grid>
             <div>
-                <div class="uk-container uk-overlay-primary" uk-scrollspy="cls: uk-animation-slide-left; delay: 500">
+                <div class="uk-padding uk-overlay-primary" uk-scrollspy="cls: uk-animation-slide-left; delay: 500">
                     <h2 class="uk-heading-divider">{{@config.custom.heroTitle}}</h2>
+
                     <div class="uk-hidden@m">{{{@config.custom.heroBody}}}</div>
                     <div class="uk-visible@m uk-text-large">{{{@config.custom.heroBody}}}</div>
                 </div>
             </div>
-            {{! /Hero }}
         </div>
-
     </div>
 </div>
+{{! /Hero }}
+
+{{! Posts }}
+<div class="uk-section">
+    <a id="readings"></a>
+
+    <div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
+        <h2 class="uk-heading-divider">Readings</h2>
+
+        <div class="uk-grid-small uk-child-width-1-3@s" uk-grid uk-height-match=".uk-card">
+            {{#each posts}}
+                <div uk-scrollspy="cls: uk-animation-fade">
+                    <div class="uk-card uk-card-secondary">
+                        {{#checkIfAll featuredImage}}
+                        <div class="uk-cover-container uk-card-media-top">
+                            <img src="{{featuredImage.urlMd}}" alt="" uk-cover>
+                            <canvas width="300" height="300"></canvas>
+                        </div>
+                        {{/checkIfAll}}
+
+                        <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-circle" width="40" height="40" src="{{author.avatarImage.url}}" alt="Avatar">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h3 class="uk-card-title uk-margin-remove-bottom">{{title}}</h3>
+                                    <p class="uk-text-meta uk-margin-remove-top"><time>{{date createdAt "YYYY-MM-DD"}}</time></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="uk-card-body" uk-height-viewport="expand: true">
+                            <p>{{excerpt}}</p>
+                        </div>
+
+                        <div class="uk-card-footer">
+                            <a href="{{url}}" class="uk-button uk-button-text">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{! /Posts }}
 
 {{> footer}}
 
