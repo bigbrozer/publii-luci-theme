@@ -226,7 +226,7 @@
                         "height": "auto"
                     },
                     "md": {
-                        "width": 749,
+                        "width": 768,
                         "height": "auto"
                     },
                     "xl": {
@@ -240,14 +240,14 @@
                 "dimensions": {
                     "xs": {
                         "width": 300,
-                        "height": 200
+                        "height": "auto"
                     },
                     "sm": {
                         "width": 480,
                         "height": "auto"
                     },
                     "md": {
-                        "width": 749,
+                        "width": 768,
                         "height": "auto"
                     },
                     "xl": {
@@ -261,14 +261,14 @@
                 "dimensions": {
                     "xs": {
                         "width": 300,
-                        "height": 200
+                        "height": "auto"
                     },
                     "sm": {
                         "width": 480,
                         "height": "auto"
                     },
                     "md": {
-                        "width": 749,
+                        "width": 768,
                         "height": "auto"
                     },
                     "xl": {
@@ -282,14 +282,14 @@
                 "dimensions": {
                     "xs": {
                         "width": 300,
-                        "height": 200
+                        "height": "auto"
                     },
                     "sm": {
                         "width": 480,
                         "height": "auto"
                     },
                     "md": {
-                        "width": 749,
+                        "width": 768,
                         "height": "auto"
                     },
                     "xl": {
@@ -303,14 +303,14 @@
                 "dimensions": {
                     "xs": {
                         "width": 300,
-                        "height": 200
+                        "height": "auto"
                     },
                     "sm": {
                         "width": 480,
                         "height": "auto"
                     },
                     "md": {
-                        "width": 749,
+                        "width": 768,
                         "height": "auto"
                     },
                     "xl": {
