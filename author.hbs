@@ -4,7 +4,11 @@
 {{> navbar}}
 
 {{#author}}
-   <div class="uk-section uk-background-cover uk-background-top-right" style="background-image: url({{asset "images/about-me-image.png"}})" uk-scrollspy="cls: uk-animation-fade">
+   <div
+      class="uk-section uk-background-cover uk-background-top-right"
+      style="background-image: url({{asset "images/about-me-image.png"}})"
+      uk-height-viewport="expand: true"
+      uk-scrollspy="cls: uk-animation-fade">
       <a id="about-me"></a>
 
       <div
