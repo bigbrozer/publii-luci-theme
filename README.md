@@ -2,6 +2,8 @@
 
 Based on Blank boilerplate theme, this has been crafted for the personal website of my sister for [Publii](https://getpublii.com/).
 
+![theme-preview](thumbnail.png)
+
 ## Getting Started with Blank theme
 
 Work in progress...
