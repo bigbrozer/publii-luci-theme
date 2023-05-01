@@ -87,6 +87,14 @@
             "type": "wysiwyg"
         },
         {
+            "name": "socialIconsColor",
+            "label": "Social icons color",
+            "group": "Colors",
+            "note": "Set the color of social icons in the footer.",
+            "value": "f626eed9",
+            "type": "text"
+        },
+        {
             "name": "mainWidth",
             "label": "Main width",
             "group": "Layout",
