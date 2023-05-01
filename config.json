@@ -185,6 +185,9 @@
             ]
         }
     ],
+    "postTemplates": {
+        "portfolio": "Describe an image for the portfolio"
+    },
     "postConfig": [
         {
             "name": "displayAuthorBio",
