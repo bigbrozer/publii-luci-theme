@@ -26,6 +26,18 @@
 </div>
 {{! /Hero }}
 
+{{! Portfolio }}
+<div class="uk-section">
+    <a id="portfolio"></a>
+
+    <div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
+        <h2 class="uk-heading-divider">Portfolio</h2>
+
+        {{> portfolio}}
+    </div>
+</div>
+{{! /Portfolio }}
+
 {{! Posts }}
 <div class="uk-section">
     <a id="readings"></a>
@@ -35,14 +47,18 @@
 
         <div class="uk-grid-small uk-child-width-1-3@m" uk-grid uk-height-match=".uk-card-body > p">
             {{#each posts}}
+                {{#unless isHidden}}
+                {{#checkIf template '!=' "portfolio"}}
                 <div uk-scrollspy="cls: uk-animation-fade">
                     <div class="uk-card uk-card-secondary">
-                        {{#checkIfAll featuredImage}}
                         <div class="uk-cover-container uk-card-media-top">
+                            {{#checkIfAll featuredImage featuredImage.urlMd}}
                             <img src="{{featuredImage.urlMd}}" alt="" uk-cover>
+                            {{else}}
+                            <img src="https://source.unsplash.com/0gkw_9fy0eQ" alt="typewriter" uk-cover>
+                            {{/checkIfAll}}
                             <canvas width="300" height="300"></canvas>
                         </div>
-                        {{/checkIfAll}}
 
                         <div class="uk-card-header">
                             <div class="uk-grid-small uk-flex-middle" uk-grid>
@@ -65,6 +81,8 @@
                         </div>
                     </div>
                 </div>
+                {{/checkIf}}
+                {{/unless}}
             {{/each}}
         </div>
     </div>

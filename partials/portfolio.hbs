@@ -1,0 +1,17 @@
+{{! Show pictures from posts tagged with "portfolio" }}
+<div
+    class="uk-grid-small uk-child-width-1-3@m"
+    uk-grid uk-height-match="img"
+    uk-lightbox="animation: slide">
+    {{#each posts}}
+        {{#unless isHidden}}
+        {{#checkIf template '==' "portfolio"}}
+            <div uk-scrollspy="cls: uk-animation-fade">
+                <a class="uk-inline" href="{{featuredImage.urlMd}}" data-caption="{{title}}">
+                    <img src="{{featuredImage.urlMd}}" height="300" alt="">
+                </a>
+            </div>
+        {{/checkIf}}
+        {{/unless}}
+    {{/each}}
+</div>

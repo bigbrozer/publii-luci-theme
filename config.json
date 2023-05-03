@@ -194,7 +194,7 @@
         }
     ],
     "postTemplates": {
-        "portfolio": "Describe an image for the portfolio"
+        "portfolio": "Image for the portfolio"
     },
     "postConfig": [
         {
