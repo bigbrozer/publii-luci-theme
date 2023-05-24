@@ -1,6 +1,6 @@
 {
    "partials": {
-           
+
       "pagination": {
          "prev": "Previous",
          "next": "Next"
@@ -14,8 +14,10 @@
    },
 
    "post": {
-      "publishedBy": "By ",
-      "lastUpdatedDate": "Updated on: ",
+      "publishedBy": "Written by ",
+      "publishedDate": "on ",
+      "mainTag": "Posted in ",
+      "lastUpdatedDate": "Last updated on ",
       "previousPost": "Previous",
       "nextPost": "Next",
       "relatedPosts": "Author: "

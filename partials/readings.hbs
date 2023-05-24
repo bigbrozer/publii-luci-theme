@@ -1,0 +1,52 @@
+{{! Posts listing }}
+<div class="uk-section">
+    <a id="readings"></a>
+
+    <div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
+        <h2 class="uk-heading-divider">Readings</h2>
+
+        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid uk-height-match=".uk-card-body > p">
+            {{#each @website.contentStructure.posts}}
+                {{#unless isHidden}}
+                {{#checkIf template '!=' "portfolio"}}
+                <a href="{{url}}" class="uk-link-reset">
+                    <div uk-scrollspy="cls: uk-animation-fade">
+                        <div class="uk-card uk-card-secondary">
+                            <div class="uk-cover-container uk-card-media-top">
+                                {{#checkIfAll featuredImage featuredImage.urlMd}}
+                                <img src="{{featuredImage.urlMd}}" alt="" uk-cover>
+                                {{else}}
+                                <img src="{{@config.custom.postDefaultHeaderImageUrl}}" uk-cover>
+                                {{/checkIfAll}}
+                                <canvas width="300" height="300"></canvas>
+                            </div>
+
+                            <div class="uk-card-header">
+                                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <img class="uk-border-circle" width="40" height="40" src="{{author.avatarImage.url}}" alt="Avatar">
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom">{{title}}</h3>
+                                        <p class="uk-text-meta uk-margin-remove-top"><time>{{date createdAt "YYYY-MM-DD"}}</time></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-card-body" uk-height-viewport="expand: true">
+                                <p>{{excerpt}}</p>
+                            </div>
+
+                            <div class="uk-card-footer">
+                                <p>{{mainTag.name}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {{/checkIf}}
+                {{/unless}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{! /Posts }}

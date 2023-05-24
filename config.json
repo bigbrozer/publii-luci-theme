@@ -95,6 +95,14 @@
             "type": "text"
         },
         {
+            "name": "postDefaultHeaderImageUrl",
+            "label": "Default post image URL",
+            "group": "Posts",
+            "note": "URL to an image shown when the post does not have a featured image.",
+            "value": "https://source.unsplash.com/0gkw_9fy0eQ",
+            "type": "text"
+        },
+        {
             "name": "mainWidth",
             "label": "Main width",
             "group": "Layout",
