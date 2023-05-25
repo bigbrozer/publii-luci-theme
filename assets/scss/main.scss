@@ -64,3 +64,50 @@ h2, h3 {
 footer {
     background-color: $navbar-background;
 }
+
+/* IMAGES */
+
+[class*='post__image'] > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: $align-margin-vertical;
+    width: auto;
+    height: 250px;
+}
+
+/* Phone landscape and bigger */
+@media (min-width: $breakpoint-small) {
+
+    [class*='post__image'] > img {
+        height: 350px;
+    }
+
+}
+
+/* Tablet landscape and bigger */
+@media (min-width: $breakpoint-medium) {
+
+    [class*='post__image'] > img {
+        height: 450px;
+    }
+
+}
+
+/* Desktop and bigger */
+@media (min-width: $breakpoint-large) {
+
+    [class*='post__image'] > img {
+        height: 550px;
+    }
+
+}
+
+/* Large screen and bigger */
+@media (min-width: $breakpoint-xlarge) {
+
+    [class*='post__image'] > img {
+        height: 650px;
+    }
+
+}
