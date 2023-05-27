@@ -1,6 +1,6 @@
 {
   "name": "luci",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build-scss": "sass assets/scss/main.scss assets/css/main.css",
     "release": "release-it"
