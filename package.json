@@ -6,6 +6,7 @@
     "release": "release-it"
   },
   "devDependencies": {
+    "@j-ulrich/release-it-regex-bumper": "^4.1.1",
     "@release-it/conventional-changelog": "^5.1.1",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "prettier": "^2.8.4",
