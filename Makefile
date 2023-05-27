@@ -14,6 +14,5 @@ dist: build
 		--prefix=luci/assets/css/ \
 			--add-file=assets/css/main.css \
 			--add-file=assets/css/main.css.map \
-			--add-file=assets/css/style.css \
 		--prefix=luci/ \
 			HEAD
