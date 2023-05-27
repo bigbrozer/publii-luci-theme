@@ -26,4 +26,7 @@ jobs:
         run: "npm ci"
 
       - name: "Compile SCSS"
-        run: "npm run build-scss"
+        run: "make build"
+
+      - name: "Create dist archive"
+        run: "make VERSION=0.0.0-dev dist"

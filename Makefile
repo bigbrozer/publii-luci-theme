@@ -1,8 +1,7 @@
 SHELL := /bin/bash
 
 .PHONY: build
-build:
-	npm run build-scss
+build: assets/css/main.css
 
 .PHONY: dist
 dist: build
@@ -16,3 +15,6 @@ dist: build
 			--add-file=assets/css/main.css.map \
 		--prefix=luci/ \
 			HEAD
+
+assets/css/main.css:
+	npm run build-scss
