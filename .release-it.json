@@ -18,6 +18,15 @@
           "preset": "conventionalcommits",
           "infile": "CHANGELOG.md",
           "header": "# Changelog"
+        },
+        "@j-ulrich/release-it-regex-bumper": {
+            "out": [
+                {
+                    "file": "config.json",
+                    "search": "\"version\": \".+?\",",
+                    "replace": "\"version\": \"{{version}}\","
+                }
+            ]
         }
     }
 }
