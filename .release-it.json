@@ -1,0 +1,23 @@
+{
+    "hooks": {
+      "after:bump": "make VERSION=${version} dist"
+    },
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "publii-luci-theme - v${version}",
+      "assets": ["dist/*.zip"]
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+        "@release-it/conventional-changelog": {
+          "preset": "conventionalcommits",
+          "infile": "CHANGELOG.md",
+          "header": "# Changelog"
+        }
+    }
+}
