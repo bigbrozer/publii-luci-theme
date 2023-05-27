@@ -38,6 +38,6 @@ jobs:
 
       - name: release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           DRY_RUN_ARG: ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         run: npm run release -- --ci --verbose ${DRY_RUN_ARG}
