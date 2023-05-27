@@ -103,76 +103,11 @@
             "type": "text"
         },
         {
-            "name": "mainWidth",
-            "label": "Main width",
-            "group": "Layout",
-            "value": "860px",
-            "type": "text"
-        },
-        {
-            "name": "sidebarWidth",
-            "label": "Sidebar width",
-            "group": "Layout",
-            "value": "300px",
-            "type": "text"
-        },
-        {
-            "name": "separator",
-            "type": "separator",
-            "label": "Selected Posts",
-            "group": "Sidebar",
-            "size": "small"
-        },
-        {
-            "name": "selectedPosts",
-            "label": "Source",
-            "group": "Sidebar",
-            "note": "Display posts from the specified tag",
-            "value": "",
-            "type": "tags-dropdown"
-        },
-        {
             "name": "amountSelectedtPosts",
             "label": "Number of posts",
             "group": "Sidebar",
             "value": "3",
             "type": "text"
-        },
-        {
-            "name": "separator",
-            "type": "separator",
-            "label": "Authors",
-            "group": "Sidebar",
-            "size": "big"
-        },
-        {
-            "name": "authors",
-            "label": "On / Off",
-            "group": "Sidebar",
-            "note": "Enable or disable the authors section",
-            "value": true,
-            "type": "checkbox"
-        },
-        {
-            "name": "authorsNumber",
-            "label": "Number of authors",
-            "group": "Sidebar",
-            "value": "5",
-            "type": "range",
-            "min": 1,
-            "max": 10,
-            "step": 1
-        },
-        {
-            "name": "fontSize",
-            "label": "Font size",
-            "group": "Fonts",
-            "note": "The font-size of the root element in REM unit",
-            "value": "1",
-            "type": "range",
-            "min": 1,
-            "max": 3,
-            "step": 0.05
         },
         {
             "name": "faviconUpload",
