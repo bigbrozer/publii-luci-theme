@@ -5,13 +5,24 @@
 
 
 {{! Hero }}
-<div class="uk-section uk-background-cover uk-background-top-right" style="background-image: url({{asset "images/about-me-image.png"}})" uk-scrollspy="cls: uk-animation-fade">
+<div
+	class="uk-section uk-background-cover uk-background-top-right"
+	style="background-image: url({{asset "images/about-me-image.png"}})"
+	uk-scrollspy="cls: uk-animation-fade"
+>
     <a id="about-me"></a>
 
-    <div class="uk-container uk-container-expand uk-height-large" uk-height-match=".uk-overlay-primary > div" uk-height-viewport="min-height: 600">
+    <div
+		class="uk-container uk-container-expand uk-height-large"
+		uk-height-match=".uk-overlay-primary > div"
+		uk-height-viewport="min-height: 600"
+	>
         <div class="uk-grid-large uk-child-width-1-2@s" uk-grid>
             <div>
-                <div class="uk-padding uk-overlay-primary" uk-scrollspy="cls: uk-animation-slide-left; delay: 500">
+                <div
+					class="uk-padding uk-overlay-primary"
+					uk-scrollspy="cls: uk-animation-slide-left; delay: 500"
+				>
                     <h2 class="uk-heading-divider">{{@config.custom.heroTitle}}</h2>
 
                     <div class="uk-hidden@m">{{{@config.custom.heroBody}}}</div>
@@ -30,7 +41,10 @@
 <div class="uk-section">
     <a id="portfolio"></a>
 
-    <div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
+    <div
+		class="uk-container uk-dark"
+		uk-scrollspy="cls: uk-animation-slide-right"
+	>
         <h2 class="uk-heading-divider">Portfolio</h2>
 
         {{> portfolio}}

@@ -1,15 +1,15 @@
 <nav class="uk-navbar-container" uk-navbar uk-sticky>
-   <div class="uk-navbar-left uk-navbar-center">
-      <a class="uk-navbar-item uk-logo" href="{{@website.url}}" aria-label="Back to Home">
-         {{#if @website.logo}}
-            <img src="{{@website.logo}}" alt="{{@website.name}}">
-         {{else}}
-            {{@website.name}}
-         {{/if}}
-      </a>
+	<div class="uk-navbar-left uk-navbar-center">
+		<a class="uk-navbar-item uk-logo" href="{{@website.url}}" aria-label="Back to Home">
+			{{#if @website.logo}}
+				<img src="{{@website.logo}}" alt="{{@website.name}}">
+			{{else}}
+				{{@website.name}}
+			{{/if}}
+		</a>
 
-      {{#if menus.mainMenu}}
-         {{> menu menus.mainMenu}}
-      {{/if}}
-   </div>
+		{{#if menus.mainMenu}}
+			{{> menu menus.mainMenu}}
+		{{/if}}
+	</div>
 </nav>

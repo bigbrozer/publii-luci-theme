@@ -158,10 +158,7 @@
         }
     ],
     "files": {
-        "ignoreAssets": [
-            "scss",
-            ".DS_Store"
-        ],
+        "ignoreAssets": ["scss", ".DS_Store"],
         "assetsPath": "assets",
         "partialsPath": "partials",
         "responsiveImages": {

@@ -5,25 +5,25 @@
   uk-height-match="img"
   uk-lightbox="animation: slide"
 >
-  {{#each posts}}
-    {{#unless isHidden}}
-      {{#checkIf template "==" "portfolio"}}
-        <div uk-scrollspy="cls: uk-animation-fade">
-          <a
-            class="uk-inline"
-            href="{{featuredImage.urlMd}}"
-            data-caption="{{title}}"
-          >
-            <img
-              class="uk-object-cover"
-              src="{{featuredImage.urlMd}}"
-              height="300"
-              alt=""
-              style="aspect-ratio: 1 / 1"
-            />
-          </a>
-        </div>
-      {{/checkIf}}
-    {{/unless}}
-  {{/each}}
+	{{#each posts}}
+		{{#unless isHidden}}
+			{{#checkIf template "==" "portfolio"}}
+				<div uk-scrollspy="cls: uk-animation-fade">
+					<a
+						class="uk-inline"
+						href="{{featuredImage.urlMd}}"
+						data-caption="{{title}}"
+					>
+						<img
+							class="uk-object-cover"
+							src="{{featuredImage.urlMd}}"
+							height="300"
+							alt=""
+							style="aspect-ratio: 1 / 1"
+						>
+					</a>
+				</div>
+			{{/checkIf}}
+		{{/unless}}
+	{{/each}}
 </div>
