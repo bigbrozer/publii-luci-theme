@@ -27,9 +27,9 @@
         <h2 class="uk-heading-divider">Readings</h2>
 		{{> readings posts=posts featuredOnly=true }}
 		{{#getPostByTags "post-index" ""}}
-			<div class="uk-flex uk-flex-right">
+			<div class="uk-margin uk-flex uk-flex-right">
     			<div>
-					<a class="uk-button uk-button-secondary" href="{{url}}">Show all articles</a>
+					<a class="uk-button uk-button-text" href="{{url}}">Show all articles</a>
 				</div>
 			</div>
 		{{/getPostByTags}}
@@ -39,32 +39,27 @@
 
 {{! Hero }}
 <div
-	class="uk-section uk-background-cover uk-background-top-right"
-	style="background-image: url({{asset "images/about-me-image.png"}})"
+	class="uk-section"
 	uk-scrollspy="cls: uk-animation-fade"
 >
     <a id="about-me"></a>
 
-    <div
-		class="uk-container uk-container-expand uk-height-large"
-		uk-height-match=".uk-overlay-primary > div"
-		uk-height-viewport="min-height: 600"
-	>
-        <div class="uk-grid-large uk-child-width-1-2@s" uk-grid>
-            <div>
-                <div
-					class="uk-padding uk-overlay-primary"
-					uk-scrollspy="cls: uk-animation-slide-left; delay: 500"
-				>
-                    <h2 class="uk-heading-divider">{{@config.custom.heroTitle}}</h2>
+    <div class="uk-container">
+        <div class="uk-grid uk-child-width-expand@s uk-flex-center" uk-grid>
+            <div
+				uk-scrollspy="cls: uk-animation-slide-left; delay: 500"
+			>
+				<h2 class="uk-heading-divider">{{@config.custom.heroTitle}}</h2>
 
-                    <div class="uk-hidden@m">{{{@config.custom.heroBody}}}</div>
-                    <div class="uk-visible@m uk-text-large">{{{@config.custom.heroBody}}}</div>
-                    {{#getAuthor 1}}
-                    <a href="{{url}}" class="uk-button uk-button-text">Read more</a>
-                    {{/getAuthor}}
-                </div>
+				<div class="uk-hidden@m">{{{@config.custom.heroBody}}}</div>
+				<div class="uk-visible@m uk-text-large">{{{@config.custom.heroBody}}}</div>
+				{{#getAuthor 1}}
+				<a href="{{url}}" class="uk-button uk-button-text">Read more</a>
+				{{/getAuthor}}
             </div>
+			<div class="uk-width-1-3@s">
+				<img  class="uk-align-center" height="600" src="{{asset "images/about-me-image_orig.png"}}" />
+			</div>
         </div>
     </div>
 </div>
