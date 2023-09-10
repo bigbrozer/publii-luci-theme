@@ -2,7 +2,7 @@
 FONT FACES
 ====*/
 
-@import url(https://fonts.bunny.net/css?family=acme:400);
+@import url(https://fonts.bunny.net/css?family=acme:250);
 
 @font-face
 {
@@ -26,8 +26,9 @@ FONT FACES
 VARIABLE OVERRIDES
 ====*/
 
+$global-font-size: 18px !default;
 $global-background: #000000 !default;
-$global-color: rgba(0, 255, 53, 0.85) !default;
+$global-color: #f626eed9 !default;
 $global-emphasis-color: #f626eed9 !default;
 $global-font-family: "Acme", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $global-secondary-background: #691066d9 !default;
@@ -49,12 +50,13 @@ body, a {
     cursor: url(../images/coeurseur-mini.png), auto !important;
 }
 
-h1 {
-    font-family: "Basteleur Bold"
+h1.uk-article-title {
+    font-family: "Basteleur Moonlight";
+    color: rgba(0, 255, 53, 0.85) !important;
 }
 
 h2, h3 {
-    font-family: "Optiker-K"
+    font-family: "Basteleur Bold";
 }
 
 .uk-overlay-primary h1 {
@@ -63,6 +65,10 @@ h2, h3 {
 
 footer {
     background-color: $navbar-background;
+}
+
+.uk-navbar-nav > li > a, .uk-navbar-item, .uk-navbar-toggle {
+    min-height: 0 !important;
 }
 
 /* IMAGES */

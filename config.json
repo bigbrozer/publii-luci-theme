@@ -137,6 +137,7 @@
         }
     ],
     "postTemplates": {
+        "index": "Show the index of all posts",
         "portfolio": "Image for the portfolio"
     },
     "postConfig": [
@@ -158,10 +159,7 @@
         }
     ],
     "files": {
-        "ignoreAssets": [
-            "scss",
-            ".DS_Store"
-        ],
+        "ignoreAssets": ["scss", ".DS_Store"],
         "assetsPath": "assets",
         "partialsPath": "partials",
         "responsiveImages": {

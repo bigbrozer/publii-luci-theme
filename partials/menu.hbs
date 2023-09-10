@@ -1,66 +1,61 @@
 {{! check if this is a first menu level }}
 {{#unless level}}
-   <ul class="uk-navbar-nav">
+	<ul class="uk-navbar-nav uk-flex-center" uk-grid>
 {{/unless}}
 {{! /check if this is a first menu lavel }}
+		{{! loop generating a list of menu items}}
+		{{#each items}}
+			<li class="uk-padding-remove"> {{! menuItemClasses generates the following CSS classses: .active and .has-submenu }}
+				{{! check if the menu item is a link }}
+				{{#if link}}
+					<a
+					href="{{menuUrl}}{{title}}"
 
-      {{! loop generating a list of menu items}}
-      {{#each items}}
-         <li{{menuItemClasses}}> {{! menuItemClasses generates the following CSS classses: .active and .has-submenu }}
+					{{! check if target attribute exists }}
+					{{#if target}}
+						target="{{target}}"
+					{{/if}}
+					{{! /check if target attribute exists }}
 
-         {{! check if the menu item is a link }}
-         {{#if link}}
-            <a
-               href="{{menuUrl}}{{title}}"
+					{{! check if rel attribute exists }}
+					{{#if rel}}
+						rel="{{rel}}"
+					{{/if}}
+					{{! /check if rel attribute exists }}
 
-               {{! check if target attribute exists }}
-               {{#if target}}
-                  target="{{target}}"
-               {{/if}}
-               {{! /check if target attribute exists }}
+					{{! check if the menu item contains a submenu }}
+					{{#if items}}
+						aria-haspopup="true"
+					{{/if}} uk-scroll>
+					{{! /check if the menu item contains a submenu }}
 
-               {{! check if rel attribute exists }}
-               {{#if rel}}
-                  rel="{{rel}}"
-               {{/if}}
-               {{! /check if rel attribute exists }}
+					{{label}}
+					</a>
+					{{! /check if the menu item is a link }}
+				{{else}}
+					{{! if the menu item is not a link display a separator }}
+					<span
+					{{#if title}}
+						title="{{title}}"
+					{{/if}}
+					{{#if items}}
+						aria-haspopup="true"
+					{{/if}}>
+					{{label}}
+					</span>
+					{{! if the menu item is not a link display a separator }}
+				{{/if}}
 
-               {{! check if the menu item contains a submenu }}
-               {{#if items}}
-                  aria-haspopup="true"
-               {{/if}} uk-scroll>
-               {{! /check if the menu item contains a submenu }}
-
-               {{label}}
-            </a>
-            {{! /check if the menu item is a link }}
-
-         {{else}}
-            {{! if the menu item is not a link display a separator }}
-            <span
-               {{#if title}}
-                  title="{{title}}"
-               {{/if}}
-               {{#if items}}
-                  aria-haspopup="true"
-               {{/if}}>
-               {{label}}
-            </span>
-            {{! if the menu item is not a link display a separator }}
-         {{/if}}
-
-         {{! check if the menu item contains a submenu }}
-         {{#if items}}
-            {{> menu}}
-         {{/if}}
-         {{! check if the menu item contains a submenu }}
-
-      </li>
-      {{/each}}
-      {{! /loop generating a list of menu items}}
-
+				{{! check if the menu item contains a submenu }}
+				{{#if items}}
+					{{> menu}}
+				{{/if}}
+				{{! check if the menu item contains a submenu }}
+			</li>
+		{{/each}}
+		{{! /loop generating a list of menu items}}
 {{! check if this is a first menu level }}
 {{#unless level}}
-   </ul>
+	</ul>
 {{/unless}}
 {{! /check if this is a first menu level }}

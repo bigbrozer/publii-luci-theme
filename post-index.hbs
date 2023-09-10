@@ -1,0 +1,12 @@
+{{! Post index; this file renders all posts which are not part of the portfolio}}
+{{> head}}
+{{> navbar}}
+
+<div class="uk-section uk-padding-small">
+	<div class="uk-container uk-animation-fade">
+		<h2 class="uk-heading-divider uk-text-center">Readings</h2>
+		{{> readings posts=@website.contentStructure.posts featuredOnly=false }}
+	</div>
+</div>
+
+{{> footer}}
