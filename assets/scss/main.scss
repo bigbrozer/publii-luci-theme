@@ -26,6 +26,7 @@ FONT FACES
 VARIABLE OVERRIDES
 ====*/
 
+$global-font-size: 18px !default;
 $global-background: #000000 !default;
 $global-color: rgba(0, 255, 53, 0.85) !default;
 $global-emphasis-color: #f626eed9 !default;
@@ -63,6 +64,10 @@ h2, h3 {
 
 footer {
     background-color: $navbar-background;
+}
+
+.uk-navbar-nav > li > a, .uk-navbar-item, .uk-navbar-toggle {
+    min-height: 0 !important;
 }
 
 /* IMAGES */

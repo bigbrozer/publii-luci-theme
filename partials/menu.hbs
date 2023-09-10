@@ -1,11 +1,11 @@
 {{! check if this is a first menu level }}
 {{#unless level}}
-	<ul class="uk-navbar-nav">
+	<ul class="uk-navbar-nav uk-flex-center" uk-grid>
 {{/unless}}
 {{! /check if this is a first menu lavel }}
 		{{! loop generating a list of menu items}}
 		{{#each items}}
-			<li{{menuItemClasses}}> {{! menuItemClasses generates the following CSS classses: .active and .has-submenu }}
+			<li class="uk-padding-remove"> {{! menuItemClasses generates the following CSS classses: .active and .has-submenu }}
 				{{! check if the menu item is a link }}
 				{{#if link}}
 					<a
