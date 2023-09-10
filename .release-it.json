@@ -1,6 +1,6 @@
 {
     "hooks": {
-      "after:bump": "make VERSION=${version} dist"
+      "after:git:release": "make VERSION=${version} dist"
     },
     "git": {
       "commitMessage": "chore: release v${version}"
