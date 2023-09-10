@@ -1,6 +1,10 @@
-{
+const fs = require('fs');
+
+const commitTemplate = fs.readFileSync('.release-it/commit.hbs').toString();
+
+module.exports = {
     "hooks": {
-      "after:bump": "make VERSION=${version} dist"
+      "after:git:release": "make VERSION=${version} dist"
     },
     "git": {
       "commitMessage": "chore: release v${version}"
@@ -17,7 +21,10 @@
         "@release-it/conventional-changelog": {
           "preset": "conventionalcommits",
           "infile": "CHANGELOG.md",
-          "header": "# Changelog"
+          "header": "# Changelog",
+          "writerOpts": {
+            "commitPartial": commitTemplate
+          }
         },
         "@j-ulrich/release-it-regex-bumper": {
             "out": [

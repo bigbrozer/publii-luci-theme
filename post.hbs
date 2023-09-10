@@ -54,9 +54,9 @@
 							{{! main tag - if not selected, the first tag in the list of all tags will be displayed }}
 							{{#if mainTag}}
 								{{ translate 'post.mainTag' }}
-								<a href="{{ mainTag.url }}">
+								{{!-- <a href="{{ mainTag.url }}"> --}}
 									{{mainTag.name }}.
-								</a>
+								{{!-- </a> --}}
 							{{/if}}
 							{{! /main tag }}
 						</div>
@@ -107,34 +107,6 @@
 							{{{text}}}
 						</p>
 						{{! /post body }}
-
-						{{! previous & next post }}
-						{{! checks if there are any posts besides the current one; including ../ segment on a path, we change the post context into the parent context }}
-						{{#checkIfAny ../previousPost ../nextPost}}
-							{{!-- #TODO: use a navbar (left, right) --}}
-							<nav id="post-navigation">
-								{{#../previousPost}}
-									{{#checkIf template '!=' "portfolio"}}
-										<a class="uk-button uk-button-text" href="{{url}}" rel="prev">
-											&larr; {{ translate 'post.previousPost' }}
-											({{title}})
-										</a>
-									{{/checkIf}}
-								{{/../previousPost}}
-
-								{{#../nextPost}}
-									{{#checkIf template '!=' "portfolio"}}
-										<a class="uk-button uk-button-text" href="{{url}}" rel="next">
-										{{ translate 'post.nextPost' }}
-										({{title}}) &rarr;
-										</a>
-									{{/checkIf}}
-								{{/../nextPost}}
-							</nav>
-						{{/checkIfAny}}
-						{{! /checks if there are any posts besides the current one }}
-						{{! /previous & next post }}
-
 					</article>
 				{{/post}}
 
@@ -155,8 +127,15 @@
 
 <div class="uk-section">
 	<div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
-		<h2 class="uk-heading-divider uk-text-center">Readings</h2>
-		{{> readings posts=@website.contentStructure.posts featuredOnly=true}}
+		<h2 class="uk-heading-divider uk-text-center">Continue reading</h2>
+		<div class="uk-grid-small uk-child-width-1-2@m" uk-grid="masonry: true">
+			{{#previousPost}}
+				<div>{{> post-card post=. }}</div>
+			{{/previousPost}}
+			{{#nextPost}}
+				<div>{{> post-card post=. }}</div>
+			{{/nextPost}}
+		</div>
 	</div>
 </div>
 
