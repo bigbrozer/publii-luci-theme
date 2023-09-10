@@ -4,6 +4,39 @@
 {{> navbar}}
 
 
+{{! Portfolio }}
+<div class="uk-section">
+    <a id="portfolio"></a>
+
+    <div
+		class="uk-container uk-dark"
+		uk-scrollspy="cls: uk-animation-slide-right"
+	>
+        <h2 class="uk-heading-divider">Portfolio</h2>
+
+        {{> portfolio}}
+    </div>
+</div>
+{{! /Portfolio }}
+
+{{! Posts }}
+<div class="uk-section">
+    <a id="readings"></a>
+
+    <div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
+        <h2 class="uk-heading-divider">Readings</h2>
+		{{> readings posts=posts featuredOnly=true }}
+		{{#getPostByTags "post-index" ""}}
+			<div class="uk-flex uk-flex-right">
+    			<div>
+					<a class="uk-button uk-button-secondary" href="{{url}}">Show all articles</a>
+				</div>
+			</div>
+		{{/getPostByTags}}
+	</div>
+</div>
+{{! /Posts }}
+
 {{! Hero }}
 <div
 	class="uk-section uk-background-cover uk-background-top-right"
@@ -37,21 +70,6 @@
 </div>
 {{! /Hero }}
 
-{{! Portfolio }}
-<div class="uk-section">
-    <a id="portfolio"></a>
-
-    <div
-		class="uk-container uk-dark"
-		uk-scrollspy="cls: uk-animation-slide-right"
-	>
-        <h2 class="uk-heading-divider">Portfolio</h2>
-
-        {{> portfolio}}
-    </div>
-</div>
-{{! /Portfolio }}
-
-{{> readings }}
-
+{{! Footer }}
 {{> footer}}
+{{! /Footer }}

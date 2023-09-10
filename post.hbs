@@ -141,7 +141,10 @@
       	{{! /indicates the post's context}}
    	</div>
 
-   	{{> readings }}
+	<div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
+        <h2 class="uk-heading-divider">Readings</h2>
+   		{{> readings posts=@website.contentStructure.posts featuredOnly=true}}
+	</div>
 
    	{{! code injection by a Custom HTML tool - defined in config.json file in the renderer section}}
    	{{#if @customHTML.afterPost}}

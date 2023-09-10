@@ -9,6 +9,7 @@ Contents:
 * [Getting Started](#getting-started)
 * [Usage](#usage)
   * [Adding a portfolio image](#adding-a-portfolio-image)
+  * [Adding a post index page](#adding-a-post-index-page)
   * [Theme settings](#theme-settings)
 * [Acknowledgements](#acknowledgements)
 * [License](#license)
@@ -26,9 +27,15 @@ Once the theme is installed, read following sections to know how to use and conf
 
 ### Adding a portfolio image
 
-The portfolio (index page) is composed of posts with only a `title`, a `featured image` and ensure `Other options ➔ Post template ➔ Image for the portfolio` is set.
+The portfolio (on homepage) is composed of posts with only a `title`, a `featured image` and ensure `Other options ➔ Post template ➔ Image for the portfolio` is set.
 
 This combination will show the picture with a lightbox effect. The `title` is used as the image caption.
+
+### Adding a post index page
+
+To generate a post index page where you can list all available posts, create a new post with a title like **Post index**, hide it and tag it `post-index`.
+
+You will see a link appearing below the **Readings** section from homepage to access the post index page.
 
 ### Theme settings
 

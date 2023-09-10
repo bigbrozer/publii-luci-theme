@@ -137,6 +137,7 @@
         }
     ],
     "postTemplates": {
+        "index": "Show the index of all posts",
         "portfolio": "Image for the portfolio"
     },
     "postConfig": [
