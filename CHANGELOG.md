@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.1.0...0.2.0) (2023-09-10)
+
+
+### Features
+
+* **core:** add a post index page system ([c8085e6](https://github.com/bigbrozer/publii-luci-theme/commit/c8085e6b700163d493b1b941fdc8d1d32e28788d))
+* **deps:** bump all dependencies ([21c0874](https://github.com/bigbrozer/publii-luci-theme/commit/21c0874ce693323551ffc11b2ae272fd5fcb1acd))
+* **index:** refactor padding and hero layout ([36fa9ba](https://github.com/bigbrozer/publii-luci-theme/commit/36fa9bade9ceae4f27f33f4a93aa13b15d3eef25))
+* **layout:** adjust fonts and paddings ([3122a0d](https://github.com/bigbrozer/publii-luci-theme/commit/3122a0d27e3548c3475d849fb105d384032d3c4f))
+
+
+### Bug Fixes
+
+* **hero:** use a grid instead of overlay ([0210ec7](https://github.com/bigbrozer/publii-luci-theme/commit/0210ec702ebae8d88459fc73d912f4440bd6c762))
+* **portfolio:** remove 1/1 ratio for pictures ([0823028](https://github.com/bigbrozer/publii-luci-theme/commit/08230281baa839cba40ac09e9bcbf4dd184f3a0a))
+
 ## 0.1.0 (2023-05-27)
 
 
