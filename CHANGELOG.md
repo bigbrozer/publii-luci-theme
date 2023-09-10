@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.2.0...0.3.0) (2023-09-10)
+
+
+### Features
+
+* feat(ci): add commit body in changelog ([98a9cba5f6fbc77f74c6a2ea895264484694cdd6](https://github.com/bigbrozer/publii-luci-theme/commit/98a9cba5f6fbc77f74c6a2ea895264484694cdd6))\n
+* feat(docs): added a migration guide between releases ([64d5d1e777ed539ef185738770e58da385a35d5d](https://github.com/bigbrozer/publii-luci-theme/commit/64d5d1e777ed539ef185738770e58da385a35d5d))\n
+* feat(portfolio): ensure all portfolio posts are hidden ([7510f6cf051d8cf21d6bbf50ce5598af270924a2](https://github.com/bigbrozer/publii-luci-theme/commit/7510f6cf051d8cf21d6bbf50ce5598af270924a2)), closes [/github.com/bigbrozer/publii-luci-theme/tree/patches/ci#updating-from-v020](https://github.com//github.com/bigbrozer/publii-luci-theme/tree/patches/ci/issues/updating-from-v020)\n
+    * A portfolio post must now be `hidden` in order to be shown. This is needed to not mix portfolio posts with real articles. That was breaking the previous / next feature.
+    * See [migration
+* feat(posts): implement previous / next navigation ([d5a08c0bfd311abd4ba4a94e1bbc5f8ca5ae34ae](https://github.com/bigbrozer/publii-luci-theme/commit/d5a08c0bfd311abd4ba4a94e1bbc5f8ca5ae34ae))\n
+
+
+### Bug Fixes
+
+* fix(ci): make dist archive after git push but before github release ([ba62451e84ae33bf34824e6ce87c359835b0261f](https://github.com/bigbrozer/publii-luci-theme/commit/ba62451e84ae33bf34824e6ce87c359835b0261f))\n
+
 ## [0.2.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.1.0...0.2.0) (2023-09-10)
 
 
