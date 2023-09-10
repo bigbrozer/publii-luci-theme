@@ -14,17 +14,17 @@
 	>
         <h2 class="uk-heading-divider uk-text-center">Portfolio</h2>
 
-        {{> portfolio}}
+        {{> portfolio posts=@website.contentStructure.posts}}
     </div>
 </div>
 {{! /Portfolio }}
 
-{{! Posts }}
+{{! Featured posts }}
 <div class="uk-section uk-padding-small">
     <a id="readings"></a>
 
     <div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
-        <h2 class="uk-heading-divider uk-text-center">Readings</h2>
+        <h2 class="uk-heading-divider uk-text-center">Featured readings</h2>
 		{{> readings posts=posts featuredOnly=true }}
 		{{#getPostByTags "post-index" ""}}
 			<div class="uk-margin uk-flex uk-flex-right">
@@ -35,7 +35,7 @@
 		{{/getPostByTags}}
 	</div>
 </div>
-{{! /Posts }}
+{{! /Featured posts }}
 
 {{! Hero }}
 <div

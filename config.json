@@ -40,7 +40,7 @@
         {
             "name": "postsPerPage",
             "label": "Posts per page",
-            "value": 12,
+            "value": -1,
             "type": "number"
         },
         {
@@ -106,7 +106,7 @@
             "name": "amountSelectedtPosts",
             "label": "Number of posts",
             "group": "Sidebar",
-            "value": "3",
+            "value": "2",
             "type": "text"
         },
         {

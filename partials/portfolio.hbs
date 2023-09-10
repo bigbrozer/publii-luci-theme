@@ -6,7 +6,7 @@
   uk-lightbox="animation: slide"
 >
 	{{#each posts}}
-		{{#unless isHidden}}
+		{{#if isHidden}}
 			{{#checkIf template "==" "portfolio"}}
 				<div uk-scrollspy="cls: uk-animation-fade">
 					<a
@@ -23,6 +23,6 @@
 					</a>
 				</div>
 			{{/checkIf}}
-		{{/unless}}
+		{{/if}}
 	{{/each}}
 </div>
