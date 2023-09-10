@@ -2,158 +2,162 @@
 {{> head}}
 {{> navbar}}
 
-<main class="uk-container uk-animation-fade">
+<div class="uk-section">
+	<div class="uk-container uk-animation-fade">
 
-   	{{! injects code via a Custom HTML tool - as defined in the config.json file in the "renderer" section }}
-   	{{#if @customHTML.beforePost}}
-    	<div id="custom-html-before-post">
-			{{{@customHTML.beforePost}}}
-      	</div>
-   	{{/if}}
-   	{{! /injects code via a Custom HTML tool }}
+		{{! injects code via a Custom HTML tool - as defined in the config.json file in the "renderer" section }}
+		{{#if @customHTML.beforePost}}
+			<div id="custom-html-before-post">
+				{{{@customHTML.beforePost}}}
+			</div>
+		{{/if}}
+		{{! /injects code via a Custom HTML tool }}
 
-   	{{! indicates the post's context}}
-  	 <div uk-grid>
-     	<div class="uk-width-expand@s">
-       		{{#post}}
-				<article class="uk-article">
-					{{! post title }}
-					<h1 class="uk-article-title">
-						{{title}}
-					</h1>
-					{{! /post title }}
+		{{! indicates the post's context}}
+		<div uk-grid>
+			<div class="uk-width-expand@s">
+				{{#post}}
+					<article class="uk-article">
+						{{! post title }}
+						<h1 class="uk-article-title uk-text-center">
+							{{title}}
+						</h1>
+						{{! /post title }}
 
-					{{! post header }}
-					<div class="uk-article-meta">
-						{{! post author }}
-						{{ translate 'post.publishedBy' }}
-						{{#author}}
-							<a href="{{url}}" rel="author" title="{{name}}">{{name}}</a>
-						{{/author}}
-						{{! /post author }}
+						{{! post header }}
+						<div class="uk-article-meta">
+							{{! post author }}
+							{{ translate 'post.publishedBy' }}
+							{{#author}}
+								<a href="{{url}}" rel="author" title="{{name}}">{{name}}</a>
+							{{/author}}
+							{{! /post author }}
 
-						{{! post creation date }}
-						{{ translate 'post.publishedDate' }}
-						<time
-							datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}"
-						>
-							{{date createdAt}}.
-						</time>
-						{{! /post creation date }}
-
-						{{! post modification date }}
-						{{#if modifiedAt}}
-							{{ translate 'post.lastUpdatedDate' }}
-							<time datetime="{{date modifiedAt 'YYYY-MM-DDTHH:mm'}}">
-								{{date modifiedAt}}.
+							{{! post creation date }}
+							{{ translate 'post.publishedDate' }}
+							<time
+								datetime="{{date createdAt 'YYYY-MM-DDTHH:mm'}}"
+							>
+								{{date createdAt}}.
 							</time>
-						{{/if}}
-						{{! /post modification date }}
+							{{! /post creation date }}
 
-						{{! main tag - if not selected, the first tag in the list of all tags will be displayed }}
-						{{#if mainTag}}
-							{{ translate 'post.mainTag' }}
-							<a href="{{ mainTag.url }}">
-								{{mainTag.name }}.
-							</a>
-						{{/if}}
-						{{! /main tag }}
-					</div>
-					{{! /post header }}
+							{{! post modification date }}
+							{{#if modifiedAt}}
+								{{ translate 'post.lastUpdatedDate' }}
+								<time datetime="{{date modifiedAt 'YYYY-MM-DDTHH:mm'}}">
+									{{date modifiedAt}}.
+								</time>
+							{{/if}}
+							{{! /post modification date }}
 
-					{{! featured image }}
-					{{#featuredImage}}
-						{{! check if an image exists }}
-						{{#if url}}
-							<figure id="featured-image">
-								<img
-									src="{{url}}"
-									{{! checks if the Responsive Images option (located in Site Settings -> Website Speed) is enabled  }}
-									{{#if @config.site.responsiveImages}}
-										{{responsiveImageAttributes 'featuredImage' srcset sizes}}
-									{{/if}}
-									{{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated }}
-									{{ lazyload "eager" }}
-									height="{{height}}"
-									width="{{width}}"
-									alt="{{alt}}"
-								>
-								{{! checks if the caption or credits exist }}
-								{{#checkIfAny caption credits}}
-									<figcaption>
-										{{caption}}
-										{{credits}}
-									</figcaption>
-								{{/checkIfAny}}
-								{{! /checks if the caption or credits exist }}
-							</figure>
-						{{else}}
-							<div class="uk-cover-container uk-height-medium">
-								<canvas width="" height=""></canvas>
-								<img
-									src="{{@config.custom.postDefaultHeaderImageUrl}}"
-									{{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated }}
-									{{ lazyload "eager" }} uk-cover
-								>
-							</div>
-						{{/if}}
-						{{! /check if an image exists }}
-					{{/featuredImage}}
-					{{! /featured image }}
+							{{! main tag - if not selected, the first tag in the list of all tags will be displayed }}
+							{{#if mainTag}}
+								{{ translate 'post.mainTag' }}
+								<a href="{{ mainTag.url }}">
+									{{mainTag.name }}.
+								</a>
+							{{/if}}
+							{{! /main tag }}
+						</div>
+						{{! /post header }}
 
-					{{! post body }}
-					<p>
-						{{{text}}}
-					</p>
-					{{! /post body }}
+						{{! featured image }}
+						{{#featuredImage}}
+							{{! check if an image exists }}
+							{{#if url}}
+								<figure id="featured-image">
+									<img
+										src="{{url}}"
+										{{! checks if the Responsive Images option (located in Site Settings -> Website Speed) is enabled  }}
+										{{#if @config.site.responsiveImages}}
+											{{responsiveImageAttributes 'featuredImage' srcset sizes}}
+										{{/if}}
+										{{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated }}
+										{{ lazyload "eager" }}
+										height="{{height}}"
+										width="{{width}}"
+										alt="{{alt}}"
+									>
+									{{! checks if the caption or credits exist }}
+									{{#checkIfAny caption credits}}
+										<figcaption>
+											{{caption}}
+											{{credits}}
+										</figcaption>
+									{{/checkIfAny}}
+									{{! /checks if the caption or credits exist }}
+								</figure>
+							{{else}}
+								<div class="uk-cover-container uk-height-small">
+									<canvas width="" height=""></canvas>
+									<img
+										src="{{@config.custom.postDefaultHeaderImageUrl}}"
+										{{! generates a native loading attribute; if the Media Lazy Load option (located in Site Settings -> Website Speed) is disabled, the loading attribute is not generated }}
+										{{ lazyload "eager" }} uk-cover
+									>
+								</div>
+							{{/if}}
+							{{! /check if an image exists }}
+						{{/featuredImage}}
+						{{! /featured image }}
 
-					{{! previous & next post }}
-					{{! checks if there are any posts besides the current one; including ../ segment on a path, we change the post context into the parent context }}
-					{{#checkIfAny ../previousPost ../nextPost}}
-						<nav id="post-navigation">
-							{{#../previousPost}}
-								{{#checkIf template '!=' "portfolio"}}
-									<a href="{{url}}" rel="prev">
-										&larr; {{ translate 'post.previousPost' }}
-										({{title}})
-									</a>
-								{{/checkIf}}
-							{{/../previousPost}}
+						{{! post body }}
+						<p>
+							{{{text}}}
+						</p>
+						{{! /post body }}
 
-							{{#../nextPost}}
-								{{#checkIf template '!=' "portfolio"}}
-									<a href="{{url}}" rel="next">
-									{{ translate 'post.nextPost' }}
-									({{title}}) &rarr;
-									</a>
-								{{/checkIf}}
-							{{/../nextPost}}
-						</nav>
-					{{/checkIfAny}}
-					{{! /checks if there are any posts besides the current one }}
-					{{! /previous & next post }}
+						{{! previous & next post }}
+						{{! checks if there are any posts besides the current one; including ../ segment on a path, we change the post context into the parent context }}
+						{{#checkIfAny ../previousPost ../nextPost}}
+							{{!-- #TODO: use a navbar (left, right) --}}
+							<nav id="post-navigation">
+								{{#../previousPost}}
+									{{#checkIf template '!=' "portfolio"}}
+										<a class="uk-button uk-button-text" href="{{url}}" rel="prev">
+											&larr; {{ translate 'post.previousPost' }}
+											({{title}})
+										</a>
+									{{/checkIf}}
+								{{/../previousPost}}
 
-				</article>
-         	{{/post}}
+								{{#../nextPost}}
+									{{#checkIf template '!=' "portfolio"}}
+										<a class="uk-button uk-button-text" href="{{url}}" rel="next">
+										{{ translate 'post.nextPost' }}
+										({{title}}) &rarr;
+										</a>
+									{{/checkIf}}
+								{{/../nextPost}}
+							</nav>
+						{{/checkIfAny}}
+						{{! /checks if there are any posts besides the current one }}
+						{{! /previous & next post }}
 
-         	<a href="#" uk-totop uk-scroll uk-sticky></a>
-      	</div>
-      	{{! /indicates the post's context}}
-   	</div>
+					</article>
+				{{/post}}
 
-	<div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
-        <h2 class="uk-heading-divider">Readings</h2>
-   		{{> readings posts=@website.contentStructure.posts featuredOnly=true}}
+				<a href="#" uk-totop uk-scroll uk-sticky></a>
+			</div>
+			{{! /indicates the post's context}}
+		</div>
+
+		{{! code injection by a Custom HTML tool - defined in config.json file in the renderer section}}
+		{{#if @customHTML.afterPost}}
+			<div id="custom-html-after-post">
+				{{{@customHTML.afterPost}}}
+			</div>
+		{{/if}}
+		{{! injects code via a Custom HTML tool }}
 	</div>
+</div>
 
-   	{{! code injection by a Custom HTML tool - defined in config.json file in the renderer section}}
-   	{{#if @customHTML.afterPost}}
-      	<div id="custom-html-after-post">
-         	{{{@customHTML.afterPost}}}
-      	</div>
-   	{{/if}}
-   	{{! injects code via a Custom HTML tool }}
-
-</main>
+<div class="uk-section">
+	<div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
+		<h2 class="uk-heading-divider uk-text-center">Readings</h2>
+		{{> readings posts=@website.contentStructure.posts featuredOnly=true}}
+	</div>
+</div>
 
 {{> footer}}

@@ -1,5 +1,5 @@
 {{! Posts listing }}
-<div class="uk-grid-small uk-child-width-1-2@m" uk-grid uk-height-match=".uk-card-body > p">
+<div class="uk-grid-small uk-child-width-1-2@m" uk-grid="masonry: true">
 	{{#each posts}}
 		{{#unless isHidden}}
 			{{#if ../featuredOnly }}

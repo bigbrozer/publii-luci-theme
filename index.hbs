@@ -5,14 +5,14 @@
 
 
 {{! Portfolio }}
-<div class="uk-section uk-padding-small">
+<div class="uk-section">
     <a id="portfolio"></a>
 
     <div
 		class="uk-container uk-dark"
 		uk-scrollspy="cls: uk-animation-slide-right"
 	>
-        <h2 class="uk-heading-divider">Portfolio</h2>
+        <h2 class="uk-heading-divider uk-text-center">Portfolio</h2>
 
         {{> portfolio}}
     </div>
@@ -24,7 +24,7 @@
     <a id="readings"></a>
 
     <div class="uk-container uk-dark" uk-scrollspy="cls: uk-animation-slide-right">
-        <h2 class="uk-heading-divider">Readings</h2>
+        <h2 class="uk-heading-divider uk-text-center">Readings</h2>
 		{{> readings posts=posts featuredOnly=true }}
 		{{#getPostByTags "post-index" ""}}
 			<div class="uk-margin uk-flex uk-flex-right">
