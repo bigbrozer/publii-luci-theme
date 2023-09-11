@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/bigbrozer/publii-luci-theme/compare/0.4.0...0.4.1) (2023-09-11)
+
+
+### Bug Fixes
+
+* **ci:** fix changelog subjects ([7c13aa5](https://github.com/bigbrozer/publii-luci-theme/commit/7c13aa59a25aaba414c9a09baaf98f93ff4e9b17))
+
 ## [0.4.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.3.0...0.4.0) (2023-09-11)
 
 
