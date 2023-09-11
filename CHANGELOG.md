@@ -5,29 +5,29 @@
 
 ### Features
 
-* feat(posts): use a small container for readability ([d80bf79](https://github.com/bigbrozer/publii-luci-theme/commit/d80bf7977a112e53be3edf93d56402a87f2fa193))
+* **posts:** use a small container for readability ([d80bf79](https://github.com/bigbrozer/publii-luci-theme/commit/d80bf7977a112e53be3edf93d56402a87f2fa193))
 
 
 ### Bug Fixes
 
-* fix(changelog): now show short commit hash ([6e0790e](https://github.com/bigbrozer/publii-luci-theme/commit/6e0790eb71dabb91f230cb8e5c2797a870607431))
+* **changelog:** now show short commit hash ([6e0790e](https://github.com/bigbrozer/publii-luci-theme/commit/6e0790eb71dabb91f230cb8e5c2797a870607431))
 
 ## [0.3.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.2.0...0.3.0) (2023-09-10)
 
 
 ### Features
 
-* feat(ci): add commit body in changelog ([98a9cba5f6fbc77f74c6a2ea895264484694cdd6](https://github.com/bigbrozer/publii-luci-theme/commit/98a9cba5f6fbc77f74c6a2ea895264484694cdd6))
-* feat(docs): added a migration guide between releases ([64d5d1e777ed539ef185738770e58da385a35d5d](https://github.com/bigbrozer/publii-luci-theme/commit/64d5d1e777ed539ef185738770e58da385a35d5d))
-* feat(portfolio): ensure all portfolio posts are hidden ([7510f6cf051d8cf21d6bbf50ce5598af270924a2](https://github.com/bigbrozer/publii-luci-theme/commit/7510f6cf051d8cf21d6bbf50ce5598af270924a2))
+* **ci:** add commit body in changelog ([98a9cba5f6fbc77f74c6a2ea895264484694cdd6](https://github.com/bigbrozer/publii-luci-theme/commit/98a9cba5f6fbc77f74c6a2ea895264484694cdd6))
+* **docs:** added a migration guide between releases ([64d5d1e777ed539ef185738770e58da385a35d5d](https://github.com/bigbrozer/publii-luci-theme/commit/64d5d1e777ed539ef185738770e58da385a35d5d))
+* **portfolio:** ensure all portfolio posts are hidden ([7510f6cf051d8cf21d6bbf50ce5598af270924a2](https://github.com/bigbrozer/publii-luci-theme/commit/7510f6cf051d8cf21d6bbf50ce5598af270924a2))
     * A portfolio post must now be `hidden` in order to be shown. This is needed to not mix portfolio posts with real articles. That was breaking the previous / next feature.
     * See [migration guide](https://github.com/bigbrozer/publii-luci-theme#updating-from-v020) to have instructions.
-* feat(posts): implement previous / next navigation ([d5a08c0bfd311abd4ba4a94e1bbc5f8ca5ae34ae](https://github.com/bigbrozer/publii-luci-theme/commit/d5a08c0bfd311abd4ba4a94e1bbc5f8ca5ae34ae))
+* **posts:** implement previous / next navigation ([d5a08c0bfd311abd4ba4a94e1bbc5f8ca5ae34ae](https://github.com/bigbrozer/publii-luci-theme/commit/d5a08c0bfd311abd4ba4a94e1bbc5f8ca5ae34ae))
 
 
 ### Bug Fixes
 
-* fix(ci): make dist archive after git push but before github release ([ba62451e84ae33bf34824e6ce87c359835b0261f](https://github.com/bigbrozer/publii-luci-theme/commit/ba62451e84ae33bf34824e6ce87c359835b0261f))
+* **ci:** make dist archive after git push but before github release ([ba62451e84ae33bf34824e6ce87c359835b0261f](https://github.com/bigbrozer/publii-luci-theme/commit/ba62451e84ae33bf34824e6ce87c359835b0261f))
 
 ## [0.2.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.1.0...0.2.0) (2023-09-10)
 
