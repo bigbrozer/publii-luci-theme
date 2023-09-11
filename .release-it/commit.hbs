@@ -1,7 +1,7 @@
 * {{header}}
 
 {{~!-- commit link --}}
-{{~#if @root.linkReferences}} ([{{hash}}](
+{{~#if @root.linkReferences}} ([{{shortHash}}](
   {{~#if @root.repository}}
     {{~#if @root.host}}
       {{~@root.host}}/
@@ -51,7 +51,7 @@
     {{~this.repository}}#{{this.issue}}
   {{~/if}}{{/each}}
 {{~/if}}
-\n
+
 {{#if body}}
 {{body}}
 {{/if}}
