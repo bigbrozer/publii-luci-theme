@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.3.0...0.4.0) (2023-09-11)
+
+
+### Features
+
+* feat(posts): use a small container for readability ([d80bf79](https://github.com/bigbrozer/publii-luci-theme/commit/d80bf7977a112e53be3edf93d56402a87f2fa193))
+
+
+### Bug Fixes
+
+* fix(changelog): now show short commit hash ([6e0790e](https://github.com/bigbrozer/publii-luci-theme/commit/6e0790eb71dabb91f230cb8e5c2797a870607431))
+
 ## [0.3.0](https://github.com/bigbrozer/publii-luci-theme/compare/0.2.0...0.3.0) (2023-09-10)
 
 
